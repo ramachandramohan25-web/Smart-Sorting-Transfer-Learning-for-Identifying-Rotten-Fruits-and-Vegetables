@@ -67,18 +67,31 @@ Note: More fruits and vegetables can be added by retraining the model.
 Smart-Sorting/
 
  ├── app.py
+ 
  ├── train_model.py
+ 
  ├── database.db
+ 
  ├── static/
+ 
  │   └── uploads/
+ 
  ├── templates/
+ 
  │   ├── index.html
+ 
  │   ├── login.html
+ 
  │   ├── register.html
+ 
  │   ├── upload.html
+ 
  │   └── result.html
+ 
  ├── requirements.txt
+ 
  ├── .gitignore
+ 
  ├── README.md
 
 ---
@@ -94,8 +107,11 @@ cd Smart-Sorting-Transfer-Learning-for-Identifying-Rotten-Fruits-and-Vegetables
 ### 2.Create Virtual Environment (Recommended)
 
 python -m venv venv
+
 Activate virtual environment:
+
 venv\Scripts\activate
+
 You will see (venv) in terminal.
 
 ### 3.Install Dependencies
@@ -105,6 +121,7 @@ pip install flask tensorflow numpy opencv-python
 ### 4.Train the Model (Optional)
 
 If the trained model file is not included:
+
 python train_model.py
 
 ### 5.Run the Flask Application
