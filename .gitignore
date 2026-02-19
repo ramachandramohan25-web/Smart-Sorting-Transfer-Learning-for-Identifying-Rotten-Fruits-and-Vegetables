@@ -1,0 +1,16 @@
+venv/
+__pycache__/
+*.pyc
+
+# Model files
+*.h5
+*.pb
+*.model
+
+# Database
+*.db
+
+# Uploads & dataset
+static/uploads/
+dataset/
+data/

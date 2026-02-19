@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Result | Smart Sorting AI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:
+        linear-gradient(rgba(2,6,23,0.88), rgba(2,6,23,0.88)),
+        url("../static/assets/images/WhatsApp Image 2026-02-10 at 10.43.26 AM.jpeg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+}
+
+/* ---------- CARD ---------- */
+.card{
+    background:rgba(255,255,255,0.10);
+    backdrop-filter:blur(18px);
+    padding:60px 55px 55px;
+    border-radius:28px;
+    text-align:center;
+    box-shadow:
+        0 0 50px rgba(34,197,94,.35),
+        0 0 120px rgba(22,163,74,.15);
+    border:1px solid rgba(187,247,208,0.25);
+    max-width:600px;
+    width:100%;
+}
+
+/* ---------- TITLE ---------- */
+h1{
+    font-size:34px;
+    font-weight:700;
+    margin-bottom:15px;
+    background:linear-gradient(90deg,#22c55e,#84cc16,#facc15);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+/* ---------- IMAGE ---------- */
+.preview{
+    width:280px;
+    border-radius:18px;
+    margin:25px 0 20px;
+    box-shadow:0 0 30px rgba(0,0,0,.6);
+    border:2px solid rgba(187,247,208,.25);
+}
+
+/* ---------- RESULT ---------- */
+.result-box{
+    margin-top:10px;
+    font-size:30px;
+    font-weight:700;
+    padding:10px 20px;
+    border-radius:14px;
+    display:inline-block;
+}
+
+/* Fresh */
+.fresh{
+    background:rgba(34,197,94,.15);
+    color:#22c55e;
+    box-shadow:0 0 25px rgba(34,197,94,.45);
+}
+
+/* Rotten */
+.rotten{
+    background:rgba(239,68,68,.15);
+    color:#ef4444;
+    box-shadow:0 0 25px rgba(239,68,68,.45);
+}
+
+/* ---------- SUBTEXT ---------- */
+.subtext{
+    font-size:14px;
+    color:#dcfce7;
+    margin-top:12px;
+}
+
+/* ---------- BUTTON ---------- */
+a{
+    display:inline-block;
+    margin-top:30px;
+    padding:14px 42px;
+    border-radius:30px;
+    background:linear-gradient(90deg,#22c55e,#84cc16);
+    color:#052e16;
+    text-decoration:none;
+    font-weight:600;
+    box-shadow:0 8px 20px rgba(34,197,94,.45);
+    transition:.25s;
+}
+
+a:hover{
+    transform:translateY(-2px);
+    box-shadow:0 12px 28px rgba(34,197,94,.55);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media(max-width:650px){
+    .card{
+        padding:40px 25px;
+    }
+    .preview{
+        width:220px;
+    }
+    h1{
+        font-size:26px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <h1>AI Prediction Result</h1>
+
+    <img src="/{{ img_path }}" class="preview">
+
+    <div class="result-box {% if 'Fresh' in result %}fresh{% else %}rotten{% endif %}">
+        {{ result }}
+    </div>
+
+    <div class="subtext">
+        Smart Sorting AI Deep Learning Classification System
+    </div>
+
+    <a href="{{ url_for('upload') }}">Analyze Another Image</a>
+
+</div>
+
+</body>
+</html>
