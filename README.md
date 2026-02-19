@@ -66,20 +66,20 @@ Note: More fruits and vegetables can be added by retraining the model.
 ## 📂 Project Structure
 Smart-Sorting/
 
-├── app.py
-├── train_model.py
-├── database.db
-├── static/
-│   └── uploads/
-├── templates/
-│   ├── index.html
-│   ├── login.html
-│   ├── register.html
-│   ├── upload.html
-│   └── result.html
-├── requirements.txt
-├── .gitignore
-├── README.md
+ ├── app.py
+ ├── train_model.py
+ ├── database.db
+ ├── static/
+ │   └── uploads/
+ ├── templates/
+ │   ├── index.html
+ │   ├── login.html
+ │   ├── register.html
+ │   ├── upload.html
+ │   └── result.html
+ ├── requirements.txt
+ ├── .gitignore
+ ├── README.md
 
 ---
 
@@ -88,6 +88,7 @@ Smart-Sorting/
 ### 1. Clone the Repository
 
 git clone https://github.com/ramachandramohan25-web/Smart-Sorting-Transfer-Learning-for-Identifying-Rotten-Fruits-and-Vegetables.git
+
 cd Smart-Sorting-Transfer-Learning-for-Identifying-Rotten-Fruits-and-Vegetables
 
 ### 2.Create Virtual Environment (Recommended)
